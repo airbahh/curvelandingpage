@@ -12,24 +12,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'open sans', sans-serif;
-    text-align: center;
-    font-weight: 600;
+    font-weight: 600;    
 }
 
 img{
-    max-width: 100%;
-    width: 80%;
+    width: 60%;
     margin: 2rem 0;
-}
-
-i img{
-    width: 2rem;
 }
 
 h1, h2{
     font-family: 'poppins';
     font-weight: 700;
 }
+
 p{
     margin: 1.4rem 0;
 }
@@ -45,7 +40,6 @@ button{
 }
 
 /* header-nav */
-
 header{
     display: flex;
     justify-content: space-between;
@@ -54,6 +48,7 @@ header{
     padding: 0 1rem;
     top: 0;
     background-color: white;
+    z-index: 100;
 }
 
 header img{
@@ -73,13 +68,26 @@ header button{
 /* main */
 
 .container{
-    justify-items: center;
     display: flex;
-    flex-flow: column nowrap;    
+    flex-flow: column;    
+    justify-items: center;
 }
 .container>*{
-    margin-top: 8rem;
+    margin-top: 6rem;
     overflow: visible;
+}
+
+section button{
+    margin: 2rem 0;
+    box-shadow: 0 3px 4px hsla(192, 100%, 9%, 0.445);
+}
+
+.hero{
+    margin-top: 10rem;
+}
+
+section:not(.section-0){
+    text-align: center;
 }
 
 section>*,footer>*{
@@ -88,26 +96,29 @@ section>*,footer>*{
     margin-right: auto;
 }
 
-footer:before{
-    content: '';
+span{
+    font-weight: 700;
     display: block;
-    width: 100%;
-    height: 53px;
-    background-image: url('images/bg-footer-top-mobile.svg');
-    background-repeat: no-repeat;
-    background-position: bottom; 
-    background-size: 100% 100%;
-    background-color: white;
-    position: relative;
-    z-index: 1;
+    font-size: 4rem;
 }
-footer{
-    background-color: var(--dark-cyan);
-    z-index: 0;
+.section-0>div{
+    width: fit-content;
+}
+.section-0>div:first-child span{
+    font-size: 5rem;
 }
 
-footer>*{
-    margin-top: 4rem;
+.section-0 p{
+    position: relative;
+    top: -2rem;
+    text-align: center;
+}
+
+.icon{
+    width: 2rem;
+    margin: 0;
+    text-align: left;
+    color: var(--light-red);
 }
 
 .section-1::before{
@@ -163,4 +174,72 @@ footer>*{
     position: relative;
     background-size: 100% 100%;
     background-color: white;
+}
+
+
+
+footer:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 53px;
+    background-image: url('images/bg-footer-top-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: 100% 100%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+footer{
+    background-color: var(--dark-cyan);
+    z-index: 0;
+    color: white;
+   
+}
+
+
+footer p, footer h2{
+    text-align: start;
+}
+
+form{
+    text-align: end;
+}
+footer input{
+    height: 2.6rem;
+    width: 100%;
+    border: none;
+    margin: 1rem 0;
+    border-radius: 6px;
+}
+
+footer button{
+    border-radius: 6px;
+
+}
+
+footer i {
+    display: inline;
+}
+footer p {
+    font-weight: 400;
+
+}
+
+svg{
+    transform: scale(0.8) translateX(-2rem);
+}
+
+footer .icon{
+    width: 1rem;
+}
+
+footer>div{
+    margin-top: 4rem;
+}
+
+footer h2{
+    font-family: sans-serif;
+    font-weight: 600;
 }
