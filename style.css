@@ -17,7 +17,9 @@
 
 img{
     width: 60%;
-    margin: 2rem 0;
+    margin: 4rem 0;
+    max-width: 500px;
+    display: block;
 }
 
 h1, h2{
@@ -29,6 +31,10 @@ p{
     margin: 1.4rem 0;
 }
 
+button:focus{
+    outline: none;
+}
+
 button{
     height: 2.6rem;
     padding: 0 2.6rem;
@@ -37,6 +43,7 @@ button{
     background-color: var(--pink);
     color: white;
     max-width:fit-content ;
+    transition: 0.3s;
 }
 
 /* header-nav */
@@ -53,6 +60,8 @@ header{
 
 header img{
     width: 7rem;
+    margin: 2rem 0;
+
 }
 
 header button{
@@ -84,6 +93,15 @@ section button{
 
 .hero{
     margin-top: 10rem;
+}
+
+.hero p{
+    max-width: 700px;
+}
+
+.hero img{
+    max-width:700px;
+    margin: 1.4rem auto;
 }
 
 section:not(.section-0){
@@ -121,62 +139,37 @@ span{
     color: var(--light-red);
 }
 
-.section-1::before{
+.section-1, .section-2{
+    background-color: var(--pale-blue);
+}
+
+.section-1::before, 
+.section-2::before, 
+.section-1:after,
+.section-2:after{
     content: '';
     display: block;
-    background-image: url('images/bg-section-top-mobile-1.svg');
     height: 52px;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: bottom; 
-    position: relative;
+    position: absolute;
     background-size: 100% 100%;
     background-color: white;
 
+}
+
+.section-1::before{
+    background-image: url(images/bg-section-top-mobile-1.svg);
 }
 .section-2::before{
-    content: '';
-    display: block;
-    background-image: url('images/bg-section-top-mobile-2.svg');
-    height: 52px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom; 
-    position: relative;
-    background-size: 100% 100%;
-    background-color: white;
+    background-image: url(images/bg-section-top-mobile-2.svg);
 }
-.section-1, .section-2{
-        background-color: var(--pale-blue);
-}
-
 .section-1::after{
-    content: '';
-    display: block;
-    background-image: url('images/bg-section-bottom-mobile-1.svg');
-    height: 52px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom; 
-    position: relative;
-    background-size: 100% 100%;
-    background-color: white;
+    background-image: url(images/bg-section-bottom-mobile-1.svg);
 }
-
 .section-2::after{
-    content: '';
-    display: block;
-    background-image: url('images/bg-section-bottom-mobile-2.svg');
-    height: 52px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom; 
-    position: relative;
-    background-size: 100% 100%;
-    background-color: white;
+    background-image: url(images/bg-section-bottom-mobile-2.svg);
 }
-
-
 
 footer:before{
     content: '';
@@ -188,14 +181,13 @@ footer:before{
     background-position: bottom; 
     background-size: 100% 100%;
     background-color: white;
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 footer{
     background-color: var(--dark-cyan);
     z-index: 0;
     color: white;
-   
 }
 
 
@@ -212,6 +204,7 @@ footer input{
     border: none;
     margin: 1rem 0;
     border-radius: 6px;
+    padding-left: 2rem;
 }
 
 footer button{
@@ -233,6 +226,7 @@ svg{
 
 footer .icon{
     width: 1rem;
+    display: inline;
 }
 
 footer>div{
@@ -242,4 +236,143 @@ footer>div{
 footer h2{
     font-family: sans-serif;
     font-weight: 600;
+}
+
+ion-icon {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+/* active state */
+section button:hover{
+    box-shadow: 0 4px 6px hsla(192, 100%, 9%, 0.815);
+}
+
+header button:hover
+{
+    box-shadow: 0 0 4px hsla(340, 100%, 59%, 0.445);
+
+}
+
+footer button:hover{
+    box-shadow: 0 0 6px hsla(340, 100%, 84%, 0.788);
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+    header img{
+        width: fit-content;
+        margin: 2rem;
+    }
+    header button{
+        margin: 2rem;
+    }
+
+    .hero{
+        margin-top: 15rem;
+    }
+
+    section button{
+        transform: scale(1.5);
+    }
+
+    section p{
+        max-width: 500px;
+    }
+    .end{
+       margin-left: auto;
+       margin-right:2rem ;
+       width: fit-content;
+       
+    }
+
+    .section-0>div:first-child{
+        margin-right: 6rem;
+    }
+    .section-0>div:last-child{
+        margin-left: 6rem;
+    }
+
+    .section-0 span{
+        font-size: 5rem;
+    }
+    .container>:not(:first-child):not(:nth-child(6)){
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        grid-auto-flow: column;
+        text-align: left;
+    }
+
+    .section-1 img,.section-2 img, footer .form{
+        grid-column: 2;
+    }
+    .section-1 img,.section-2 img{
+        margin: 10rem auto 10rem 2rem;
+    }
+    
+    .section-1::before, .section-2::before{
+        top: 0;
+    }
+    .section-1::after,.section-2:after{
+        bottom: 0;
+    }
+    
+    .section-1::before, 
+    .section-2::before, 
+    .section-1:after,
+    .section-2:after, 
+    footer:before
+    {
+        height: 156px;
+    }
+        
+    .section-1::before{
+        background-image: url(images/bg-section-top-desktop-1.svg);
+    }
+    .section-2::before{
+        background-image: url(images/bg-section-top-desktop-2.svg);
+    }
+    .section-1::after{
+        background-image: url(images/bg-section-bottom-desktop-1.svg);
+    }
+    .section-2::after{
+        background-image: url(images/bg-section-bottom-desktop-2.svg);
+    }
+
+    footer::before{
+        top: 0;
+        background-image: url(images/bg-footer-top-desktop.svg);
+    }
+    footer>div{
+        margin-top: 10rem;
+    }
+    form{
+        display: flex;
+        align-items: center;
+    }
+    form button{
+        margin-left: 1.4rem;
+    }
+ 
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1.4rem;
+    }
+    form>input, form>button{
+        height: 3rem;
+    }
+
 }

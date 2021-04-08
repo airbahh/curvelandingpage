@@ -11,12 +11,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
     rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="./script.js"></script>
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
+      padding: 2rem;
+      margin: 0;
       font-size: 11px;
       text-align: center;
+      background-color: hsl(192, 100%, 9%);
     }
 
     .attribution a {
@@ -45,7 +50,6 @@
       <button>
         Get Started For Free
       </button>
-
       <img src="images/screen-mockups.svg" alt="screen-mockup">
     </section>
     <section class="section-0">
@@ -71,39 +75,45 @@
     </section>
     <section class="section-1">
       <img src="images/illustration-grow-together.svg" alt="illustration-grow-together">
-      <h2>
+      <div class="end">
+        <h2>
 
-        Grow Together
-      </h2>
-      <p>
+          Grow Together
+        </h2>
+        <p>
 
-        Generate meaningful discussions with your audience and build a strong, loyal community.
-        Think of the insightful conversations you miss out on with a feedback form.
-      </p>
+          Generate meaningful discussions with your audience and build a strong, loyal community.
+          Think of the insightful conversations you miss out on with a feedback form.
+        </p>
+      </div>
     </section>
     <section>
-      <img src="images/illustration-flowing-conversation.svg" alt="illustration-flowing-conversation">
-      <h2>
+      <img class="end" src="images/illustration-flowing-conversation.svg" alt="illustration-flowing-conversation">
+      <div>
+        <h2>
 
-        Flowing Conversations
-      </h2>
-      <p>
+          Flowing Conversations
+        </h2>
+        <p>
 
-        You wouldn't paginate a conversation in real life, so why do it online? Our threads have
-        just-in-time loading for a more natural flow.
-      </p>
+          You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+          just-in-time loading for a more natural flow.
+        </p>
+      </div>
     </section>
     <section class="section-2">
       <img src="images/illustration-your-users.svg" alt="illustration-your-users">
-      <h2>
+      <div class="end">
+        <h2>
 
-        Your Users
-      </h2>
-      <p>
+          Your Users
+        </h2>
+        <p>
 
-        It takes no time at all to integrate Huddle with your app's authentication solution. This means,
-        once signed in to your app, your users can start chatting immediately.
-      </p>
+          It takes no time at all to integrate Huddle with your app's authentication solution. This means,
+          once signed in to your app, your users can start chatting immediately.
+        </p>
+      </div>
     </section>
     <section>
       <h1>
@@ -115,7 +125,7 @@
       </button>
     </section>
     <footer>
-      <div>
+      <div class="form">
         <h2>
           Newsletter
         </h2>
@@ -124,8 +134,8 @@
           send you spam or pass on your email address
         </p>
         <form>
-          <input type="email">
-          <button type="submit">
+          <input type="email" name="email" aria-labelledby="email">
+          <button type="submit" id="validate">
             Subscribe
           </button>
         </form>
@@ -154,14 +164,18 @@
             <img class="icon" src="images/icon-email.svg" alt="">
             example@huddle.com
           </p>
+
         </div>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
       </div>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-      </p>
     </footer>
   </div>
+  <p class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </p>
 </body>
 
 </html>
