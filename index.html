@@ -134,8 +134,11 @@
           send you spam or pass on your email address
         </p>
         <form>
-          <input type="email" name="email" aria-labelledby="email">
-          <button type="submit" id="validate">
+          <div>
+            <input type="email" name="email" id="emailInput" aria-labelledby="email">
+            <div id="msg"></div>
+          </div>
+          <button id="validate">
             Subscribe
           </button>
         </form>
@@ -177,5 +180,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </p>
 </body>
+
+<p class="msg-true"> </p>
 
 </html>

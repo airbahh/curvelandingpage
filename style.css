@@ -204,7 +204,7 @@ footer input{
     border: none;
     margin: 1rem 0;
     border-radius: 6px;
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 footer button{
@@ -240,7 +240,12 @@ footer h2{
 
 ion-icon {
     margin-top: 2rem;
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+ion-icon:hover {
+ background-color: rgba(255, 255, 255, 0.507);
+ border-radius: 4px;
+
   }
 
 /* active state */
@@ -261,16 +266,31 @@ footer button:hover{
 
 
 
+form>div{
+    position: relative;
+    width: 100%;
 
+}
 
+.msg-false{
+    color: rgb(255, 64, 64);
+    font-size: 0.8rem;
+    position: absolute;
+    margin: -1rem 0 0 1rem;
+}
+.msg-true{
+    color: rgb(93, 217, 255);
+    font-size: 0.8rem;
+    position: absolute;
+    margin: -1rem 0 0 1rem;
+
+}
 
 @media only screen and (min-width: 1024px) {
     header img{
         width: fit-content;
-        margin: 2rem;
-    }
-    header button{
-        margin: 2rem;
+       transform: scale(0.7);
+       margin: 1rem;
     }
 
     .hero{
